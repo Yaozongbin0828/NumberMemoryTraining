@@ -1,0 +1,114 @@
+/* 含义->数字 */
+.tipBtnContainer {
+  position: relative;
+}
+
+#tipBtn {
+  position: absolute;
+  right: 325px;
+  top: -100px;
+  margin: 0;
+  display: block;
+  padding: 12px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  background-color: rgba(182, 183, 185, 0.37);
+  border: 3px solid rgba(182, 183, 185, 0.37);
+  border-radius: 5px;
+  box-shadow: 0 5px 0 rgba(182, 183, 185, 0.37);
+  transition: all 0.3s;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+#tipBtn:hover {
+  background-color: #2e7d32;
+  box-shadow: 0 3px 0 #2e7d32;
+  color: #fff;
+  transform: translateY(2px);
+}
+
+.tipBtnContainer::after {
+  position: relative;
+  content: "(提示按钮有bug 请点击两次!!)";
+  color: #8a8a8a;
+  left: 240px;
+  top: -35px;
+}
+
+#userInputInfo {
+  display: block;
+  margin: 8px auto 0;
+  text-align: center;
+  width: 400px;
+  height: 30px;
+  outline: none;
+  border: 1px solid lightgray;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 20px;
+  border-radius: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#userInputInfo:hover {
+  border: 1px solid #8c8c8c;
+}
+
+#promptNum p {
+  font-size: 150px;
+  margin: 0;
+  padding: 0;
+}
+
+#tipImage img {
+  width: 300px;
+  height: 300px;
+}
+
+#tipImage p {
+  font-size: 26px;
+}
+
+.chartContainer {
+  position: relative;
+}
+
+.chart {
+  position: absolute;
+  right: 49px;
+  top: 565px;
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.barTrue {
+  width: 40px;
+  height: 4px;
+  background-color: rgb(78, 233, 78);
+}
+
+.barFalse {
+  width: 40px;
+  height: 4px;
+  background-color: red;
+}
+
+.greenBox {
+  position: absolute;
+  right: 45px;
+  bottom: 0;
+}
+
+.redBox {
+  position: absolute;
+  right: 0px;
+  bottom: 0;
+}
+

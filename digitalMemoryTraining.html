@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>数字记忆训练</title>
+    <link rel="icon" href="logo/jquery.png" />
+    <link rel="stylesheet" href="./css/mixins.css" />
+  </head>
+
+  <body>
+    <div id="container">
+      <!-- tab -->
+      <ul class="tab-menu">
+        <li data-target="tab1">数字谐音分类❌</li>
+        <li data-target="tab2" class="active">数字→含义</li>
+        <li data-target="tab3">含义→数字</li>
+        <li data-target="tab4">实战❌</li>
+        <li data-target="tab5">默写Pi</li>
+        <li data-target="tab6">人名数字❌</li>
+      </ul>
+      <!-- 数字谐音分类 -->
+      <div class="tab-content" id="tab1">
+        <h2>数字谐音分类</h2>
+        <div>Under development</div>
+      </div>
+      <!-- 数字->含义 -->
+      <div class="tab-content active" id="tab2">
+        <h2>数字→含义</h2>
+        <!-- 进度条 -->
+        <div class="progress-container">
+          <div id="progressCount">0</div>
+          <div id="progressBar"></div>
+        </div>
+        <div id="promptInfo"></div>
+        <input
+          type="text"
+          id="userInputNum"
+          placeholder="请输入数字按回车确定"
+          maxlength="2"
+        />
+        <div id="tfOutputBox"></div>
+        <!-- 柱状图 -->
+        <div id="chartContainer">
+          <div id="chart">
+            <div class="greenBox">
+              <div class="barTrue" id="correctBar">&nbsp;</div>
+              <div id="chartTrueInfo"></div>
+            </div>
+            <div class="redBox">
+              <div class="barFalse" id="wrongBar">&nbsp;</div>
+              <div id="chartFalseInfo"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 含义→数字 -->
+      <div class="tab-content" id="tab3">
+        <h2>含义→数字</h2>
+        <!-- 柱状图 -->
+        <div class="chartContainer">
+          <div class="chart">
+            <div class="greenBox">
+              <div class="barTrue" id="correctBarNum">&nbsp;</div>
+              <div id="chartTrueInfoNum"></div>
+            </div>
+            <div class="redBox">
+              <div class="barFalse" id="wrongBarNum">&nbsp;</div>
+              <div id="chartFalseInfoNum"></div>
+            </div>
+          </div>
+        </div>
+        <!-- 进度条 -->
+        <div class="progress-container-infoToNum">
+          <div id="progressCountNum">0</div>
+          <div id="progressBarNum"></div>
+        </div>
+        <div id="promptNum"></div>
+        <!-- 提示按钮 -->
+        <div class="tipBtnContainer">
+          <button id="tipBtn">提示</button>
+        </div>
+        <div id="tipImage"></div>
+        <input
+          type="text"
+          id="userInputInfo"
+          placeholder="请输入含义按回车确定"
+        />
+        <div id="numTFOutputBox"></div>
+      </div>
+      <!-- 实战 -->
+      <div class="tab-content pr" id="tab4">
+        <h2>实战</h2>
+        <div>Under development</div>
+      </div>
+      <!-- 默写Pi -->
+      <div class="tab-content pr" id="tab5">
+        <h2>默写Pi</h2>
+        <input
+          class="pa"
+          id="dictationOfPi"
+          type="text"
+          placeholder="请默写π的前n位小数"
+        />
+        <div id="piCurrentIndex" class="pa">写到Pi的第几位：0</div>
+        <div id="piErrorCount" class="pa">错误次数: 0</div>
+        <button id="piResetButton" class="pa">清除重写</button>
+      </div>
+      <!-- 人名数字 -->
+      <div class="tab-content" id="tab6">
+        <h2>人名数字</h2>
+        <div>Under development</div>
+      </div>
+      <div class="tag"></div>
+    </div>
+  </body>
+  <script src="./js/jquery-3.3.1.js"></script>
+  <script src="./js/tabActive.js"></script>
+  <script src="./js/data.js"></script>
+  <script src="./js/numToInfo.js"></script>
+  <script src="./js/infoToNum.js"></script>
+  <script src="./js/dictationOfPi.js"></script>
+</html>

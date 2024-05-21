@@ -1,0 +1,14 @@
+.tag::after {
+  content: "21计科5班-2214040506-姚宗彬-jQuery大作业";
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  top: 0.1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+  color: #a1a4ab;
+  text-align: center;
+  border: 0.5px solid #8a8a8a;
+}

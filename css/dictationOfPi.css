@@ -1,0 +1,50 @@
+/* 默写Pi */
+#dictationOfPi {
+  display: block;
+  margin: 8px auto 0;
+  text-align: center;
+  width: 950px;
+  height: 600px;
+  outline: none;
+  border: 1px solid lightgray;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 95px;
+  border-radius: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  right: 12px;
+  bottom: 12px;
+}
+
+#dictationOfPi:hover {
+  border: 1px solid #8c8c8c;
+}
+
+#piResetButton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  box-shadow: -1px -1px 5px #fff, 1px 2px 2px #888;
+  cursor: pointer;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  bottom: 17px;
+  left: 75px;
+}
+
+#piResetButton:hover {
+  background-color: #8a8a8a;
+}
+
+#piCurrentIndex {
+  right: 30px;
+  top: 50px;
+}
+
+#piErrorCount {
+  bottom: 72px;
+  left: 82px;
+}

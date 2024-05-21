@@ -1,0 +1,75 @@
+/* 数字->含义 */
+#chartContainer {
+  position: relative;
+}
+
+#chart {
+  position: absolute;
+  right: 45px;
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#chart div {
+  flex: 1;
+  margin: 0 2px;
+}
+
+#promptInfo img {
+  width: 450px;
+  height: 450px;
+}
+
+#promptInfo p {
+  margin: 8px 0;
+}
+
+#userInputNum {
+  display: block;
+  margin: 8px auto;
+  text-align: center;
+  width: 400px;
+  height: 30px;
+  outline: none;
+  border: 1px solid lightgray;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 20px;
+  border-radius: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#userInputNum:hover {
+  border: 1px solid #8c8c8c;
+}
+#tfOutputBox {
+  margin: 8px 0 0 0;
+}
+
+.barTrue {
+  width: 40px;
+  height: 4px;
+  background-color: rgb(78, 233, 78);
+}
+
+.barFalse {
+  width: 40px;
+  height: 4px;
+  background-color: red;
+}
+
+.greenBox {
+  position: absolute;
+  right: 45px;
+  bottom: 0;
+}
+
+.redBox {
+  position: absolute;
+  right: 0px;
+  bottom: 0;
+}

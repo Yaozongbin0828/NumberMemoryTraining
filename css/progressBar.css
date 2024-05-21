@@ -1,0 +1,28 @@
+/* 进度条样式 */
+#progressBar,
+#progressBarNum {
+  width: 1%;
+  position: absolute;
+  height: 30px;
+  background-color: rgba(51, 153, 255); /* 进度条颜色 */
+  transition: width 0.3s ease; /* 添加过渡效果 */
+}
+
+/* 题目条数 */
+#progressCount,
+#progressCountNum {
+  position: absolute;
+  top: -30px;
+  right: 18px;
+}
+
+/* 进度条容器样式 */
+.progress-container-infoToNum,
+.progress-container {
+  width: 100%;
+  background-color: #f2f2f2;
+  position: relative;
+  border: 1px solid #8a8a8a;
+  height: 31px;
+  top: 655px;
+}
