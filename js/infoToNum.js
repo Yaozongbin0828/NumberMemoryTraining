@@ -28,16 +28,6 @@ function getRandomNumber() {
   }
 }
 
-// 提示按钮
-function tipImageBtn() {
-  // 提示图片按钮
-  $("#tipBtn").on("click", function () {
-    $("#tipImage")
-      .html(`<img data-id="${imgInfoId}" src="${imgUrl}"><p>${imgInfoNum}</p>`)
-      .toggle();
-  });
-}
-
 // 柱状图
 function chartRandomDataNum() {
   $("#chartTrueInfoNum").html(`<span>${correctCountNum}</span>`);
@@ -52,9 +42,10 @@ function updateProgressBarNum() {
   let progress = (arrListInfoLength / dataLength) * 100;
   progressListInfo = progress;
 
-  console.log(progressListInfo);
+  // console.log(progressListInfo);
 }
 
+// 获取随机数据和进度条函数
 function getRandomNumberAndupdateProgressBarNum() {
   getRandomNumber();
   updateProgressBarNum();
@@ -63,8 +54,23 @@ function getRandomNumberAndupdateProgressBarNum() {
 // 页面挂载
 $(function () {
   getRandomNumberAndupdateProgressBarNum();
-  tipImageBtn();
   chartRandomDataNum();
+
+  // 提示按钮 显示/隐藏图片
+  $("#tipBtn").on("click", function () {
+    $("#tipImage").toggle("fast", function () {
+      let ifHide =
+        $("#tipImage")
+          .html(
+            `<img data-id="${imgInfoId}" src="${imgUrl}"><p>${imgInfoNum}</p>`
+          )
+          .css("display") == "block"
+          ? false
+          : true;
+      ifHide ? $("#tipBtn").text("提示") : $("#tipBtn").text("隐藏");
+    });
+  });
+
   // 提交
   $("#userInputInfo").on("keypress", function (e) {
     if (e.which === 13) {
@@ -72,6 +78,12 @@ $(function () {
       console.log(arrListInfo);
       // trim()去除空格
       let userInputInfo = $.trim($("#userInputInfo").val());
+      
+      if (userInputInfo === "") {
+        alert("请输入数字对应的含义");
+        return;
+      }
+
       $.each(arrListInfo, function (index, item) {
         if (item == userInputInfo) {
           isInfo = true;
@@ -106,7 +118,9 @@ $(function () {
       if (correctCountNum + wrongCountNum != data.length) {
         if (progressListInfo <= 100) {
           $("#progressBarNum").css("width", progressListInfo + "%");
-          $("#progressCountNum").html(`<span>${progressListInfo.toFixed(0)}</span>`);
+          $("#progressCountNum").html(
+            `<span>${progressListInfo.toFixed(0)}</span>`
+          );
         }
       }
 

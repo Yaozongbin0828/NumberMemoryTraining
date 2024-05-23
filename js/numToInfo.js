@@ -6,7 +6,7 @@ let wrongCount = 0;
 let arrListNum = [];
 let imgInfo = "";
 let isMath = false;
-let progressList;
+let progressList = 1;
 
 // 随机生成图片
 function getRandomData() {
@@ -50,7 +50,6 @@ function getRandomDataAndUpdateProgressBar() {
   updateProgressBar();
 }
 
-
 $(function () {
   // 页面挂载后执行一次
   chartRandomData();
@@ -63,6 +62,11 @@ $(function () {
       console.log(arrListNum);
       // 获取用户输入的值
       let userInput = $.trim($("#userInputNum").val());
+      if (userInput === "") {
+        alert("请输入图片对应的数字");
+        return;
+      }
+
       $.each(arrListNum, function (index, item) {
         if (item == userInput) {
           // 正确
@@ -81,6 +85,7 @@ $(function () {
       });
 
       console.log(isMath);
+
       if (isMath) {
         // 统计正确次数
         correctCount++;
@@ -88,10 +93,9 @@ $(function () {
 
         $("#chartTrueInfo").html(`<span>${correctCount}</span>`);
         $("#correctBar").css("height", 4 + correctCount * 4 + "px");
-      } else {
-        // 错误
-        isMath = false;
 
+        // 错误
+      } else if (isMath == false) {
         // 统计错误次数
         wrongCount++;
         console.log("错误次数" + wrongCount);

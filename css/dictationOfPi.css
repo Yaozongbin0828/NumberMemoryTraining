@@ -4,7 +4,7 @@
   margin: 8px auto 0;
   text-align: center;
   width: 950px;
-  height: 600px;
+  height: 670px;
   outline: none;
   border: 1px solid lightgray;
   padding: 20px;
@@ -17,6 +17,7 @@
   right: 12px;
   bottom: 12px;
 }
+
 
 #dictationOfPi:hover {
   border: 1px solid #8c8c8c;
@@ -37,14 +38,18 @@
 
 #piResetButton:hover {
   background-color: #8a8a8a;
+  box-shadow: 0 3px 0 #6d6d6d;
 }
 
 #piCurrentIndex {
   right: 30px;
-  top: 50px;
+  top: 35px;
+  font-size: 18px;
 }
 
 #piErrorCount {
+  font-size: 18px;
+
   bottom: 72px;
   left: 82px;
 }

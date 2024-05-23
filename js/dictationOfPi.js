@@ -4,14 +4,10 @@ let piDigits =
 let currentIndex = 0; // 初始化当前索引
 let piErrorCount = 0; // 初始化错误次数
 
-let startIndex = 0;
-let endIndex = 20;
-let twentyDigits = piDigits.substring(startIndex, endIndex);
+let twentyDigits = piDigits.substring(0, 20);
 console.log("前20位：" + twentyDigits);
 console.log(piDigits);
 
-// 清除重写按钮
-function clearRewriteBtn() {}
 
 $(function () {
   // 输入框
@@ -23,11 +19,11 @@ $(function () {
       currentIndex = 0; // 重置索引值，允许用户重新输入
       $("#piErrorCount").text("错误次数: " + piErrorCount); // 更新错误次数显示
       $("#dictationOfPi").css("background-color", "lightcoral");
-      piErrorCount++; // 错误次数自加
+      piErrorCount++;
     } else {
       // 如果用户输入正确，更新当前需要输入的π的数字索引
       currentIndex = userInput.length;
-      $("#piCurrentIndex").text("写到Pi(Π)的第几位：" + currentIndex); // 更新当前输入位置显示
+      $("#piCurrentIndex").text("写到Pi的第几位：" + currentIndex); // 更新当前输入位置显示
       $("#dictationOfPi").css("background-color", "white"); // 背景恢复正常
     }
   });
@@ -37,8 +33,8 @@ $(function () {
     $("#dictationOfPi").val(""); // 清除用户输入
     currentIndex = 0; // 重置索引
     piErrorCount = 0; // 重置错误次数
-    $("#piErrorCount").text("错误次数: " + piErrorCount); // 更新错误次数显示
-    $("#piCurrentIndex").text("写到Pi(Π)的第几位：" + currentIndex); // 更新当前输入位置显示
-    $("dictationOfPi").css("background-color", "white"); // 背景恢复正常
+    $("#piErrorCount").text("错误次数: " + piErrorCount);
+    $("#piCurrentIndex").text("写到Pi的第几位：" + currentIndex);
+    $("dictationOfPi").css("background-color", "white");
   });
 });

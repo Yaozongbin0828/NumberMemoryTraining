@@ -1,7 +1,7 @@
 /* 进度条样式 */
 #progressBar,
 #progressBarNum {
-  width: 1%;
+  width: 0%;
   position: absolute;
   height: 30px;
   background-color: rgba(51, 153, 255); /* 进度条颜色 */
@@ -14,6 +14,7 @@
   position: absolute;
   top: -30px;
   right: 18px;
+  
 }
 
 /* 进度条容器样式 */

@@ -7,36 +7,24 @@
   position: absolute;
   right: 325px;
   top: -100px;
-  margin: 0;
-  display: block;
-  padding: 12px 20px;
-  font-size: 16px;
-  text-align: center;
-  text-decoration: none;
-  color: #000;
-  background-color: rgba(182, 183, 185, 0.37);
-  border: 3px solid rgba(182, 183, 185, 0.37);
-  border-radius: 5px;
-  box-shadow: 0 5px 0 rgba(182, 183, 185, 0.37);
-  transition: all 0.3s;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  box-shadow: -1px -1px 5px #fff, 1px 2px 2px #888;
   cursor: pointer;
-  overflow: hidden;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+
 }
 
 #tipBtn:hover {
-  background-color: #2e7d32;
-  box-shadow: 0 3px 0 #2e7d32;
+  background-color: #8a8a8a;
+  box-shadow: 0 3px 0 #6d6d6d;
   color: #fff;
   transform: translateY(2px);
 }
 
-.tipBtnContainer::after {
-  position: relative;
-  content: "(提示按钮有bug 请点击两次!!)";
-  color: #8a8a8a;
-  left: 240px;
-  top: -35px;
-}
 
 #userInputInfo {
   display: block;
@@ -112,3 +100,6 @@
   bottom: 0;
 }
 
+#numTFOutputBox p {
+  margin: 8px 0 0;
+}
