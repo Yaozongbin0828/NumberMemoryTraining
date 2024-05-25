@@ -33,7 +33,7 @@ $(function () {
       $(this).val(""); // 错误自动清空input框
       currentIndex = 0; // 重置索引值，允许用户重新输入
       $("#piErrorCount").text("错误次数: " + piErrorCount); // 更新错误次数显示
-      $("#piDisplay").css("background-color", "lightcoral").text("您输入的数字与π的数字不匹配，请重新默写！");
+      $("#piDisplay").css("background-color", "lightcoral").text("您输入的数字与π的数字不匹配，请点击按钮重新默写！");
       // $("#piDisplay").empty();
       piErrorCount++;
     } else {
