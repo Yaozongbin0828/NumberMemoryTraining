@@ -78,7 +78,8 @@ $(function () {
       console.log(arrListInfo);
       // trim()去除空格
       let userInputInfo = $.trim($("#userInputInfo").val());
-      
+      $("#userInputInfo").val("");
+
       if (userInputInfo === "") {
         alert("请输入数字对应的含义");
         return;

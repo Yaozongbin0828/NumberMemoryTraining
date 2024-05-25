@@ -62,6 +62,7 @@ $(function () {
       console.log(arrListNum);
       // 获取用户输入的值
       let userInput = $.trim($("#userInputNum").val());
+      $("#userInputNum").val("");
       if (userInput === "") {
         alert("请输入图片对应的数字");
         return;

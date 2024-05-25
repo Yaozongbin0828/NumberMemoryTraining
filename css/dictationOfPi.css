@@ -2,9 +2,8 @@
 #dictationOfPi {
   display: block;
   margin: 8px auto 0;
-  text-align: center;
   width: 950px;
-  height: 670px;
+  height: 125px;
   outline: none;
   border: 1px solid lightgray;
   padding: 20px;
@@ -18,6 +17,23 @@
   bottom: 12px;
 }
 
+#piDisplay{
+  display: block;
+  height: 537px;
+  width: 1176px;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-align: left;
+  font-size: 95px;
+  outline: none;
+  transition: 0.5s;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+  background-color: #fff;
+  margin: 0 8px ;
+}
 
 #dictationOfPi:hover {
   border: 1px solid #8c8c8c;
