@@ -46,7 +46,7 @@ table {
   border-spacing: 0;
 }
 #container {
-  width: 100%;
+  width: 1200px;
   text-align: center;
   margin: 50px auto;
   max-height: 100%;
@@ -55,7 +55,7 @@ table {
 }
 
 .tab-content {
-  height: 850px;
+  height: 750px;
   border: 1px solid #8a8a8a;
 }
 
